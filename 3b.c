@@ -8,8 +8,12 @@
 #include<stdio.h>
 int main()
 {
-	int num = 9362,a,b,c,d,temp;
+	int num ,rem, rev = 0, temp;
+	printf("enter the number : ");
+	scanf("%d",&num);
+
 	temp = num ;
+/*	
 	d = num % 10 ;
 	num = num /10;
 
@@ -20,7 +24,16 @@ int main()
 	num = num /10;
 
 	a = num ;
+*/  
+
+	while (num != 0)
+	{ 
+		rem = num % 10;
+		rev =(rev * 10 )+ rem;
+		num = num / 10;
+	}
+
 	printf("Input : %d\n",temp);
-	printf("Output : %d%d%d%d\n",d,c,b,a);
+	printf("Output : %d\n",rev);
 return 0;
 }
